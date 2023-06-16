@@ -1,0 +1,46 @@
+﻿/*
+    自訂YT撥放器CSS
+*/
+
+.videocontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    max-width: 3000px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.circle_button {
+    margin-left: 1px;
+    border-radius: 5px;
+}
+
+    .circle_button:hover {
+        background-color: darkgrey;
+    }
+
+iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    display: block;
+    font-size: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.videodiv {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}

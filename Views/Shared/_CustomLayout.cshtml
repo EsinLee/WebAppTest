@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebAppTest</title>
+    <link href="~/privateicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebAppTest.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="sideselectionpan">
+            <div class="titlepan">
+                <img src="~/images/bt_dragmove_normal.png" />
+                <h1>Lxy ASP.Net test</h1>
+            </div>
+            <ul>
+                <li>Users</li>
+                <li>Settings</li>
+                <li>Categerys</li>
+            </ul>
+        </div>
+
+        <div class="mainpan">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2023 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

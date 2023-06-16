@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Expenses";
+}
+@model WebAppTest.Models.Domain.AddCashFlow
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Expenses</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="~/Accounting">Accounting</a></li>
+            <li class="breadcrumb-item active">Expenses</li>
+        </ol>
+        <div class="card mb-4">
+            <div class="card-body">
+                <form method="post" action="AddCashFlow">
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control bg-primary opacity-50" id="inputReceiptId" placeholder="ReceiptId" value="12313" asp-for="ReceiptId" readonly>
+                        <label for="inputReceiptId" class="form-label">ProposerId</label>
+                        <!--input type="text" class="form-control" asp-for="ProposerId" readonly-->
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputReceiptId" placeholder="ReceiptId" asp-for="ReceiptId">
+                        <label for="inputReceiptId" class="form-label">ReceiptId</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="form-control" id="inputDate" placeholder="Date" asp-for="Date">
+                        <label for="inputDate" class="form-label">Date</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" aria-label="Currency" id="inputCurrency" placeholder="Currency" asp-for="Currency">
+                            <option selected value="TWD">TWD</option>
+                            <option value="USD">USD</option>
+                            <option value="RMB">RMB</option>
+                        </select>
+                        <label for="inputCurrency" class="form-label">Currency</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="inputMoney" placeholder="Price" asp-for="Money">
+                        <label for="inputMoney" class="form-label">Price</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputTrader" placeholder="ReceiptId" asp-for="Trader">
+                        <label for="inputTrader" class="form-label">Trader</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputAccountNamesId" placeholder="AccountNamesId" asp-for="AccountNamesId">
+                        <label for="inputAccountNamesId" class="form-label">AccountNamesId</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+                DataTable Example
+            </div>
+            <div class="card-body">
+                <table id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                        </tr>
+                        <tr>
+                            <td>Garrett Winters</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>2011/07/25</td>
+                            <td>$170,750</td>
+                        </tr>
+                        <tr>
+                            <td>Ashton Cox</td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>2009/01/12</td>
+                            <td>$86,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
